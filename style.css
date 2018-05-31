@@ -12,6 +12,10 @@ html, body {
   font-family: monospace;
 }
 
-.error {
+.stout, .sterr {
+  display: block;
+}
+
+.sterr {
   color: red;
 }
