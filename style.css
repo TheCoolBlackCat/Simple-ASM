@@ -1,0 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+}
+
+#programInput {
+  height: 250px;
+}
+
+#programOutput {
+  font-family: monospace;
+}
+
+.error {
+  color: red;
+}

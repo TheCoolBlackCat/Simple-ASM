@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple ASM</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-4">
+            <table class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Content</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">$a</th>
+                  <td id="r_a">0</td>
+                </tr>
+                <tr>
+                  <th scope="row">$b</th>
+                  <td id="r_b">0</td>
+                </tr>
+                <tr>
+                  <th scope="row">$c</th>
+                  <td id="r_c">0</td>
+                </tr>
+                <tr>
+                  <th scope="row">$d</th>
+                  <td id="r_d">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-8">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" id="programInput" rows="3"></textarea>
+              </div>
+                <button type="button" class="btn btn-primary mb-2" onClick="run()">Run</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <output id="programOutput">
+            Your output will show up here!
+          </output>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Instructions</h1>
+        </div>
+        <div class="col-md-6">
+          <h2>add</h2>
+          <p>$ $ $</p>
+
+          <h2>addi</h2>
+          <p>$ $ x</p>
+
+          <h2>sub</h2>
+          <p>$ $ x</p>
+
+          <h2>jmp</h2>
+          <p>$ $ x</p>
+        </div>
+        <div class="col-md-6">
+          <h2>load</h2>
+          <p>$ x</p>
+
+          <h2>store</h2>
+          <p>$ x</p>
+
+          <h2>ife</h2>
+          <p>$ $ x</p>
+
+          <h2>ifne</h2>
+          <p>$ $ x</p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
