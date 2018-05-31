@@ -74,6 +74,9 @@ function run () {
       case "add":
         set (instruction[1], get(instruction[2])+get(instruction[3]));
         break;
+      case "addi":
+        set (instruction[1], get(instruction[2])+Number(instruction[3]));
+        break;
       case "load":
         set (instruction[1], instruction[2]);
         break;
