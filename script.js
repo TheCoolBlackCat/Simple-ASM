@@ -27,16 +27,16 @@ function updateRegisterOutput () {
 function get (str) {
   switch (str) {
     case "$a":
-      return registers[0];
+      return Number(registers[0]);
       break;
     case "$b":
-      return registers[1];
+      return Number(registers[1]);
       break;
     case "$c":
-      return registers[2];
+      return Number(registers[2]);
       break;
     case "$d":
-      return registers[3];
+      return Number(registers[3]);
       break;
     default:
       output("Error getting register " + str, 1);
@@ -72,7 +72,7 @@ function run () {
 
     switch (instruction[0]) {
       case "add":
-        set (instruction[1], instruction[2]+instruction[3]);
+        set (instruction[1], get(instruction[2])+get(instruction[3]));
         break;
       case "load":
         set (instruction[1], instruction[2]);
