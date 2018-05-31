@@ -20,6 +20,17 @@ function resetOutput () {
   document.getElementById("programOutput").innerHTML = "";
 }
 
+function resetRegisters () {
+  for (var i = 0; i < registers.length; i++)
+    registers[i] = 0;
+}
+
+function reset () {
+  resetOutput();
+  resetRegisters();
+  updateRegisterOutput();
+}
+
 function updateRegisterOutput () {
   document.getElementById("r_a").innerHTML = registers[0];
   document.getElementById("r_b").innerHTML = registers[1];
@@ -69,7 +80,7 @@ function run () {
   raw = document.getElementById("programInput").value; // Get input
   instructions = raw.split(/\r?\n/); // Split on newline
 
-  resetOutput();
+  reset();
 
   for (i = 0; i < instructions.length; i++) {
     instruction = instructions[i].split(" ");
@@ -93,15 +104,15 @@ function run () {
         set (instruction[1], instruction[2]);
         break;
       case "jmp":
-        i = Number(instruction[1]);
+        i = Number(instruction[1]) - 1;
         break;
       case "ife":
         if (get(instruction[1]) === get(instruction[2]))
-          i = Number(instruction[3]);
+          i = Number(instruction[3]) - 1;
         break;
       case "ifne":
       if (get(instruction[1]) !== get(instruction[2]))
-        i = Number(instruction[3]);
+        i = Number(instruction[3]) - 1;
         break;
       case "stdout":
         output(get(instruction[1]), 0);
@@ -109,8 +120,10 @@ function run () {
       case "stderr":
         output(get(instruction[1]), 1);
         break;
-      case "exit":
+      case "nop":
         break;
+      case "":
+          break;
       default:
         if (instruction[0].charAt(0) === "#")
           break;
