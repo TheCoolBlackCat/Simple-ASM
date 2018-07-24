@@ -23,3 +23,8 @@ html, body {
 .debug {
   color: forestgreen;
 }
+
+#testers {
+    color: red;
+    text-align: center;
+}
