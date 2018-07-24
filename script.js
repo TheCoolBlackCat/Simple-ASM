@@ -1,6 +1,7 @@
 var registers = [0, 0, 0, 0];
 var line = 0;
 var error = false;
+var debug = false;
 
 /* output()
  * Outputs to "console" by altering #programOutput.innerHTML
@@ -14,6 +15,8 @@ function output (o, type) {
     case 1:
       document.getElementById("programOutput").innerHTML += '<span class="sterr">'+o+"</span><br>";
       error = true;
+    case 2:
+      document.getElementById("programOutput").innerHTML += '<span class="debug">'+o+"</span><br>";
       break;
     default:
       document.getElementById("programOutput").innerHTML += '<span class="stout">'+encodeURI(o)+"</span><br>";;
@@ -43,6 +46,7 @@ function reset () {
   resetOutput();
   resetRegisters();
   updateRegisterOutput();
+  error = false;
 }
 
 /* updateRegisterOutput()
@@ -115,10 +119,9 @@ function run () {
     instruction = instructions[i].split(" ");
     line = i+1;
 
-    // DEBUG
-     // console.log(instruction);
-     // console.log(i);
-     // console.log(line);
+    if (debug) {
+        output(line + ": " + instruction, 2);
+    }
 
     // Watch [0] (Where instruction name stored
     switch (instruction[0]) {
@@ -162,7 +165,10 @@ function run () {
       case "nop": // No Operation, Advance PC
         break;
       case "": // Empty, Advance PC
-          break;
+        break;
+      case "debug": // Toggles debugging
+        debug = !debug;
+        break;
       default:
         if (instruction[0].charAt(0) === "#") // Comment
           break;

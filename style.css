@@ -12,10 +12,14 @@ html, body {
   font-family: monospace;
 }
 
-.stout, .sterr {
+.stout, .sterr, .debug {
   display: block;
 }
 
 .sterr {
   color: red;
+}
+
+.debug {
+  color: forestgreen;
 }
