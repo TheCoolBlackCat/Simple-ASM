@@ -25,6 +25,10 @@ html, body {
 }
 
 #testers {
-    color: red;
+    color: orange;
     text-align: center;
+}
+
+#testers a {
+    color: orangered;
 }
