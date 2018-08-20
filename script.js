@@ -5,25 +5,6 @@
 //   }
 //   console.dir(lines);
 // }
-//
-// prefixLines();
-// function prefixLines () {
-//   $("#programInput").on("change", "#programInput", function() {
-//
-//     // Target all classed with ".lined"
-//     $(".lined").linedtextarea(
-//       {selectedLine: 1}
-//     );
-//
-//     // Target a single one
-//     $("#programInput").linedtextarea();
-//
-//   });
-// }
-//
-// prefixLines();
-
-// document.getElementById("docs").addEventListener("change", prefixLines);
 
 function appendDoc (loc, op) {
   var div = document.createElement("div"),
