@@ -12,16 +12,16 @@ html, body {
   font-family: monospace;
 }
 
-.stout, .sterr, .debug {
+.stdout, .stderr, .debug {
   display: block;
 }
 
-.sterr {
+.stderr {
   color: red;
 }
 
 .debug {
-  color: forestgreen;
+  color: #007bff;
 }
 
 #testers {
