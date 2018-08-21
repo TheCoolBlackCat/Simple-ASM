@@ -1,11 +1,12 @@
-// function prefixLines() {
-//   var lines = input.value.split(/\r?\n/);
-//   for (var i = 0; i < lines.length; i++) {
-//     lines[i] += "HI";
-//   }
-//   console.dir(lines);
+// Line Prefixes
+// function LN_Prefix_INIT(ta) {
+  LNPrefix(input);
+  input.addEventListener("input", LNPrefix.bind(this, input));
 // }
 
+// LN_Prefix_INIT(input);
+
+// Documentation
 function appendDoc (loc, op) {
   var div = document.createElement("div"),
       h2 = document.createElement("h2")

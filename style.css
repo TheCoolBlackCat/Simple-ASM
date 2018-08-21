@@ -6,6 +6,7 @@ html, body {
 
 #programInput {
   height: 250px;
+  outline: none;
 }
 
 #programOutput {
