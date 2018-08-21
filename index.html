@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>SimpleASM</title>
   </head>
@@ -42,7 +42,9 @@
           <div class="col-md-8">
             <form>
               <div class="form-group">
-                <textarea class="form-control" id="programInput" rows="3"></textarea>
+                <div>
+                  <textarea class="form-control" id="programInput" rows="3"></textarea>
+                </div>
               </div>
                 <button type="button" class="btn btn-primary mb-2" onClick="run()">Run</button>
                 <button type="button" class="btn btn-danger mb-2" onClick="resetAll()">Reset</button>
@@ -61,64 +63,14 @@
         <div id="testers" class="col-md-12">
           <p>It's still early days, so if you encounter a bug, or wish to suggest a new feature, please file an issue <a href="https://github.com/TheCoolBlackCat/SimpleASM/issues">here</a></p>
         </div>
-        <div class="col-md-12">
+        <div id="docs" class="col-md-12">
           <h1>Instructions</h1>
-        </div>
-        <div class="col-md-6">
-          <h2>add</h2>
-          <p>$ $ $</p>
-          <p><small>Add registers on the right, and store the result in the left register</small></p>
-
-          <h2>addi</h2>
-          <p>$ $ x</p>
-          <p><small>Add registers on the right with the value, and store the result in the left register</small></p>
-
-          <h2>sub</h2>
-          <p>$ $ $</p>
-          <p><small>Subtract the register on the right from the one in the centre, and store the result in the left register</small></p>
-
-          <h2>stdout</h2>
-          <p>$</p>
-          <p><small>Output the value in the register specified</small></p>
-
-          <h2>stderr</h2>
-          <p>$</p>
-          <p><small>Output the value in the register specified, indicating an error</small></p>
-
-          <!-- <h2>in?</h2>
-          <p>$</p> -->
-        </div>
-        <div class="col-md-6">
-          <h2>load</h2>
-          <p>$ x</p>
-          <p><small>Load the value into the register specified</small></p>
-
-          <!-- <h2>store</h2>
-          <p>$ x</p> -->
-
-          <h2>ife</h2>
-          <p>$ $ x</p>
-          <p><small>Compare the two registers, and if they're equal, jump to the line specified</small></p>
-
-          <h2>ifne</h2>
-          <p>$ $ x</p>
-          <p><small>Compare the two registers, and if they're unequal, jump to the line specified</small></p>
-
-          <h2>jmp</h2>
-          <p>x</p>
-          <p><small>Jump unconditionally to the line specified</small></p>
-
-          <h2>stdoutt</h2>
-          <p>x</p>
-          <p><small>Output the given value (or text)</small></p>
-
-          <!--<h2>stderrt</h2>
-          <p>x</p>
-          <p><small>Output the given value (or text)</small></p>-->
         </div>
       </div>
     </div>
     <script type="text/javascript" src="instructions.js"></script>
+    <script type="text/javascript" src="asm.js"></script>
+    <script type="text/javascript" src="ta-ln.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

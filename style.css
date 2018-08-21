@@ -6,6 +6,7 @@ html, body {
 
 #programInput {
   height: 250px;
+  outline: none;
 }
 
 #programOutput {
@@ -31,4 +32,8 @@ html, body {
 
 #testers a {
     color: orangered;
+}
+
+.col-md-6 {
+  float: left;
 }
