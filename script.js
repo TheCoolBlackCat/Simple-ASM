@@ -1,7 +1,7 @@
 // Line Prefixes
 // function LN_Prefix_INIT(ta) {
-  LNPrefix(input);
-  input.addEventListener("input", LNPrefix.bind(this, input));
+  //LNPrefix(input);
+  //input.addEventListener("input", LNPrefix.bind(this, input));
 // }
 
 // LN_Prefix_INIT(input);
