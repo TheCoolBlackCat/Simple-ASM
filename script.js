@@ -15,7 +15,7 @@ function appendDoc (loc, op) {
 
   div.classList.add("col-md-6");
   h2.innerText = op;
-  p2.innerText = instructions[op].syntax;
+  p1.innerText = instructions[op].syntax;
   p2.innerHTML = "<small>"+instructions[op].description+"</small>";
 
   div.appendChild(h2);
